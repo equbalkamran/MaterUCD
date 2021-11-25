@@ -147,7 +147,7 @@ if password=='MaterUCD':
             st.subheader("ET Motor Details")
             st.write('Try patient no 204 and 215')
             if type(m6.iloc[n]['Date'])!=str:
-                st.write('Date of test : '+m6.iloc[n]['Date'].strftime("%m/%d/%Y"))
+                st.write('Date of test : '+str(m6.iloc[n]['Date']))
             else:
                 st.write('Date of test : Not Available')
             st.write()
