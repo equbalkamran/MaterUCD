@@ -21,7 +21,7 @@ pd_postop_outcomes= pd.read_excel(xlsx,'PD_Postop_outcomes')
 all_physio_outcomes= pd.read_excel(xlsx,'All_Physio_outcomes')
 neuropsych_outcomes= pd.read_excel(xlsx,'Neuropsych_outcomes')
 
-all_batteries.drop_duplicates(subset=['MMUH MRN'],keep='last',inplace=True)
+all_batteries.drop_duplicates(subset=['MRN'],keep='last',inplace=True)
 pd_demographics.drop_duplicates(subset=['Mater MRN'],keep='last',inplace=True)
 mdt_workflow.drop_duplicates(subset=['MMUH MRN'],keep='last',inplace=True)
 et_motor.drop_duplicates(subset=['MMUH MRN'],keep='last',inplace=True)
