@@ -189,19 +189,6 @@ if password=='MaterUCD':
              st.write("Try patient no 96")
              test=['Gait 5TSTS', 'Gait TUAG']
              if m6.iloc[n]['1 year post opDate']!='Not available':
-                st.write('1 year post op carried out on:' +m6.iloc[n]['1 year post opDate'].strftime("%m/%d/%Y"))
-                if m6.iloc[n]['6 months post opDate']=='Not available':
-                    st.write('6 months post op carried out on: Not available')
-                else:
-                    st.write('6 months post op carried out on:' +m6.iloc[n]['6 months post opDate'].strftime("%m/%d/%Y"))
-                if m6.iloc[n]['SurgeryDate']=='Not available':
-                    st.write('Surgery carried out on: Not Available')
-                else:
-                    st.write('Surgery carried out on:' +m6.iloc[n]['SurgeryDate'].strftime("%m/%d/%Y"))
-                if m6.iloc[n]['Pre-OpDate']=='Not available':
-                    st.write('Pre op Work up date Not available')
-                else:
-                    st.write('pre op work up carried out on:' +m6.iloc[n]['Pre-OpDate'].strftime("%m/%d/%Y"))
                 fig = go.Figure(data=[
                     go.Bar(name='Baseline', x=test, y=m6.iloc[n][124:126].replace('Not available',0)),
                     go.Bar(name='6 months', x=test, y=m6.iloc[n][138:140].replace('Not available',0)),
@@ -209,22 +196,12 @@ if password=='MaterUCD':
                     ])
                 st.plotly_chart(fig)
              elif m6.iloc[n]['6 months post opDate']!='Not available':
-                st.write('6 months post op carried out on:' +m6.iloc[n]['6 months post opDate'].strftime("%m/%d/%Y"))
-                if m6.iloc[n]['SurgeryDate']=='Not available':
-                    st.write('Surgery carried out on: Not Available')
-                else:
-                    st.write('Surgery carried out on:' +m6.iloc[n]['SurgeryDate'].strftime("%m/%d/%Y"))
-                if m6.iloc[n]['Pre-OpDate']=='Not available':
-                    st.write('Pre op Work up date Not available')
-                else:
-                    st.write('pre op work up carried out on:' +m6.iloc[n]['Pre-OpDate'].strftime("%m/%d/%Y"))
                 fig = go.Figure(data=[
                     go.Bar(name='Baseline', x=test, y=m6.iloc[n][124:126].replace('Not available',0)),
                     go.Bar(name='6 months', x=test, y=m6.iloc[n][138:140].replace('Not available',0))
                     ])
                 st.plotly_chart(fig)
              elif m6.iloc[n]['Pre-OpDate']!='Not available':
-                st.write('pre op work up carried out on:' +m6.iloc[n]['Pre-OpDate'].strftime("%m/%d/%Y"))
                 fig = go.Figure(data=[
                     go.Bar(name='Baseline', x=test, y=m6.iloc[n][124:126].replace('Not available',0))
                     ])
@@ -236,7 +213,6 @@ if password=='MaterUCD':
         if Neuro_details:
             st.subheader("Neuro Details")
             if type(m6.iloc[n]['T1 date'])!=str:
-                st.write('T1 date : '+m6.iloc[n]['Pre-OpDate'].strftime("%m/%d/%Y"))
                 st.bar_chart(m6.iloc[n][181:183])
                 st.write(m6.iloc[n][178:198].transpose())
             else:
