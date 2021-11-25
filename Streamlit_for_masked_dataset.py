@@ -146,11 +146,6 @@ if password=='MaterUCD':
         if ET_Motor_details:
             st.subheader("ET Motor Details")
             st.write('Try patient no 204 and 215')
-            if type(m6.iloc[n]['Date'])!=str:
-                st.write('Date of test : '+str(m6.iloc[n]['Date']))
-            else:
-                st.write('Date of test : Not Available')
-            st.write()
             st.write('Hours taken for QUEST:   '+str(m6.iloc[n]['QUEST Hours']))
             et_motor_data=pd.DataFrame([m6.iloc[n]['FTMTRS'],m6.iloc[n]['QUEST'],m6.iloc[n]['QUEST Health'],m6.iloc[n]['QUEST QOL']],columns=['Values'],index=['FTMTRS','QUEST','Quest Health','Quest QOL'])
             #st.dataframe(et_motor_data.applymap(str))
