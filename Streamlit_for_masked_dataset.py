@@ -161,10 +161,6 @@ if password=='MaterUCD':
         if PD_Postop_details:
             st.subheader("PD Post-op Details")
             st.write('Try Patient no 241')
-            if type(m6.iloc[n]['Surgical date'])!=str:
-                st.write(m6.iloc[n]['Surgical date'])
-            else:
-                st.write('Date of SUrgery : Not Available ')
             st.write('Age at Surgery:   '+str(m6.iloc[n]['Age at surgery']))
             st.write('Target:   '+str(m6.iloc[n]['Target']))
             test=['UPDRS I', 'UPDRS II']
