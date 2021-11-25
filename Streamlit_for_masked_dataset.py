@@ -215,7 +215,7 @@ if password=='MaterUCD':
             st.write("Try patient no 89 or 241")
             if type(m6.iloc[n]['T1 date'])!=str:
                 st.bar_chart(m6.iloc[n][181:183])
-                st.write(m6.iloc[n][178:198])
+                st.write(m6.iloc[n][178:185])
             else:
                 st.write('T1 Date : Not Available ')
             st.write('_____________________________________________________________________________________________________________________________')
