@@ -76,7 +76,7 @@ st.write("This application shows the data of one individual patient based on the
 st.subheader(" School of Electronics Engineering, University College Dublin and The Mater Misericordiae University Hospital")
 st.warning("Security Warning.")
 password=st.sidebar.text_input("Please enter the password :", "password")
-if password=='UCDthesisreview':
+if password=='MaterUCD':
     
     mrn = st.sidebar.text_input("Enter the MRN no of the patient:", "0019")
     mrn=int(mrn)
